@@ -4,6 +4,10 @@ function setup() {
   video = createCapture(VIDEO);
   video.hide();
   classifier = ml5.imageClassifier('MobileNet',modelLoaded);
+  constraints: {
+    facingMode: "environment"
+  }
+  
 }
 
 function modelLoaded() {
